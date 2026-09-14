@@ -1,0 +1,167 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/marketing/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:KlarheitKurrent|RedHatText))/i]",
+        "message": "Font not provided by the design system. Available: KlarheitKurrent, RedHatText."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent-dark",
+      "--accent-line",
+      "--action",
+      "--bg",
+      "--bg-dark",
+      "--bg-subtle",
+      "--black",
+      "--blue",
+      "--body",
+      "--border",
+      "--bright-green",
+      "--container-default",
+      "--container-medium",
+      "--container-narrow",
+      "--container-small",
+      "--container-wide",
+      "--dur",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-bounce",
+      "--ease-slide",
+      "--fg",
+      "--fg-faint-dark",
+      "--fg-muted",
+      "--fg-muted-dark",
+      "--fg-on-dark",
+      "--font-body",
+      "--font-heading",
+      "--green",
+      "--heading",
+      "--lavender-grey",
+      "--light-blue",
+      "--light-green",
+      "--light-grey",
+      "--light-orange",
+      "--light-purple",
+      "--light-red",
+      "--navy",
+      "--orange",
+      "--purple",
+      "--radius-card",
+      "--radius-card-lg",
+      "--radius-pill",
+      "--red",
+      "--snow",
+      "--space-13",
+      "--space-15",
+      "--space-18",
+      "--space-4_25",
+      "--space-51",
+      "--space-7_5",
+      "--white"
+    ],
+    "tokenKinds": {
+      "--font-heading": "font",
+      "--font-body": "font",
+      "--navy": "color",
+      "--blue": "color",
+      "--light-blue": "color",
+      "--bright-green": "color",
+      "--light-green": "color",
+      "--green": "color",
+      "--light-purple": "color",
+      "--purple": "color",
+      "--light-orange": "color",
+      "--orange": "color",
+      "--light-red": "color",
+      "--red": "color",
+      "--black": "color",
+      "--light-grey": "color",
+      "--lavender-grey": "color",
+      "--white": "color",
+      "--snow": "color",
+      "--bg": "color",
+      "--bg-dark": "color",
+      "--bg-subtle": "color",
+      "--fg": "color",
+      "--fg-on-dark": "color",
+      "--fg-muted": "color",
+      "--fg-muted-dark": "color",
+      "--fg-faint-dark": "color",
+      "--action": "color",
+      "--accent-dark": "color",
+      "--accent-line": "color",
+      "--border": "color",
+      "--container-narrow": "spacing",
+      "--container-default": "spacing",
+      "--container-wide": "spacing",
+      "--container-small": "spacing",
+      "--container-medium": "spacing",
+      "--radius-card": "radius",
+      "--radius-card-lg": "radius",
+      "--radius-pill": "radius",
+      "--ease-slide": "other",
+      "--ease-bounce": "other",
+      "--dur-fast": "other",
+      "--dur": "other",
+      "--dur-slow": "other",
+      "--space-4_25": "spacing",
+      "--space-7_5": "spacing",
+      "--space-13": "spacing",
+      "--space-15": "spacing",
+      "--space-18": "spacing",
+      "--space-51": "spacing",
+      "--heading": "other",
+      "--body": "other"
+    },
+    "fontFamilies": [
+      "KlarheitKurrent",
+      "RedHatText"
+    ]
+  }
+}

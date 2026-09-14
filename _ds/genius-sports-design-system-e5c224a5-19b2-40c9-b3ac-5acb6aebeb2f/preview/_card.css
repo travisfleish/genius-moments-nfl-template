@@ -1,0 +1,27 @@
+/* Shared styles for Design System preview cards (700px-wide specimens) */
+@font-face { font-family:"KlarheitKurrent"; src:url("../fonts/KlarheitKurrent-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
+@font-face { font-family:"KlarheitKurrent"; src:url("../fonts/KlarheitKurrent-Bold.woff2") format("woff2"); font-weight:700; font-display:swap; }
+@font-face { font-family:"KlarheitKurrent"; src:url("../fonts/ESKlarheitKurrent-Md_TRIAL.woff2") format("woff2"); font-weight:500; font-display:swap; }
+@font-face { font-family:"KlarheitKurrent"; src:url("../fonts/ESKlarheitKurrent-Smbd_TRIAL.woff2") format("woff2"); font-weight:600; font-display:swap; }
+@font-face { font-family:"RedHatText"; src:url("../fonts/RedHatText-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
+@font-face { font-family:"RedHatText"; src:url("../fonts/RedHatText-Medium.woff2") format("woff2"); font-weight:500; font-display:swap; }
+
+:root{
+  --navy:#0D1226; --blue:#0000DC; --light-blue:#95ECFD; --bright-green:#E1FF67;
+  --light-green:#18C971; --green:#047C40; --light-purple:#C2D1FF; --purple:#4337A8;
+  --light-orange:#FFEBAF; --orange:#FA5D00; --light-red:#F76B6A; --red:#C20000;
+  --light-grey:#F6F7F9; --lavender-grey:#E7E7E9; --snow:#FAFAFA;
+  --heading:"KlarheitKurrent",system-ui,sans-serif; --body:"RedHatText",system-ui,sans-serif;
+}
+*{ box-sizing:border-box; }
+html,body{ margin:0; }
+body{
+  font-family:var(--body); color:var(--navy); background:#fff;
+  width:700px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.card{ padding:26px 30px; }
+.card--dark{ background:var(--navy); color:#fff; }
+.lbl{ font-family:var(--body); font-size:11px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:rgba(13,18,38,.45); }
+.card--dark .lbl{ color:rgba(255,255,255,.5); }
+.heading{ font-family:var(--heading); }
+.mono{ font-variant-numeric:tabular-nums; }

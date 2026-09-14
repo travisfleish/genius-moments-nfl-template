@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @font-face {
+      font-family: "KlarheitKurrent";
+      src: url("fonts/KlarheitKurrent-Regular.woff2") format("woff2");
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "KlarheitKurrent";
+      src: url("fonts/KlarheitKurrent-Bold.woff2") format("woff2");
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "RedHatText";
+      src: url("fonts/RedHatText-Regular.woff2") format("woff2");
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "RedHatText";
+      src: url("fonts/RedHatText-Medium.woff2") format("woff2");
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    html, body { margin: 0; padding: 0; height: 100%; background: #0D1226; overflow: hidden; }
+    a { color: #E1FF67; }
+    a:hover { color: #FFFFFF; }
+  </style>
+  <script src="./nfl-game.js"></script>
+</helmet>
+<div id="film-root" data-screen-label="nfl-moments-film-4x5" data-om-exportable-video-with-duration-secs="27" style="position: fixed; inset: 0; background: #0D1226;">
+  <x-import component-from-global-scope="NFLMomentsFilm4x5" from="./NFLMomentsFilm4x5.jsx" style="position: absolute; inset: 0;" hint-size="100%,100%"></x-import>
+</div>
+</x-dc>
+</body>
+</html>
